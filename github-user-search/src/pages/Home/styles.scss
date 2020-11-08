@@ -1,0 +1,30 @@
+.home-container{
+    background-color: #fff;
+    padding: 179px 0 0 120px;
+    height: calc(100vh - 62px);
+}
+.home-content{
+    margin-bottom: 48px;
+}
+.home-content h1 {
+    font-family: 'Red Hat Display', sans-serif;
+    color: #062847;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 64px;
+    letter-spacing: 0.02em;
+    margin-bottom: 24px;
+}
+
+.home-content p{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 20px;
+    line-height: 36px;
+    color: #5A6774;
+
+}
+
+.home-content span {
+    color: #45b2fb;
+}

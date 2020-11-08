@@ -1,0 +1,24 @@
+button{
+    background-color: #1890FF;
+    width: 101px;
+    height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 400ms;
+}
+
+button:hover{
+    transition: background-color 400ms;
+    background-color: #0669c5;
+}
+
+h5{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    line-height: 24px;
+
+}
