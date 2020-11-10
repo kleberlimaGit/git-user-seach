@@ -6,7 +6,7 @@ type Props = {
     text:string;
 }
 const BlueButton = ({text}:Props) => (
-    <button>
+    <button >
         <h5>{text}</h5>
     </button>
 
