@@ -1,6 +1,6 @@
 import BlueButton from 'core/components/Button';
-import { UserGit } from 'core/types/Users';
-import { formatarData } from 'core/utils/formatardata';
+import { UserGit } from 'core/types/users';
+import { formatarData } from 'core/utils/formatarData';
 import { makeRequest } from 'core/utils/request';
 import React, { useState } from 'react';
 import ProductDescriptionLoader from './components/Loaders/ProductDescriptionLoaders';
@@ -72,9 +72,13 @@ const Search = () => {
                         </div>
                         
                     </div>
-                    <a href={`https://github.com/${name}`} target="_blank">
-                    <BlueButton text="Ver Perfil"/>          
-                    </a>
+                    {isLoading ? "" : (<>
+                        <a href={`https://github.com/${name}`} target="_blank">
+                            <BlueButton text="Ver Perfil"/>          
+                        </a>
+                    
+                    </>)}
+                   
                             
                   
                     
