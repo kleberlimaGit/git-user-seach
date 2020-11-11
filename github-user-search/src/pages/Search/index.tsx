@@ -46,7 +46,7 @@ const Search = () => {
                 </div>
                 {!isSearch? "": 
                 (<>
-                                    <div className="user-container">
+                <div className="user-container">
                     <div className="user-content">
                             {isLoading ? <ProductInfoLoader/> : <img src={userResponse?.avatar_url} alt="Avatar do usuário github"/>}
                                 
@@ -70,7 +70,15 @@ const Search = () => {
                             </>)}
 
                         </div>
+                        
                     </div>
+                    <a href={`https://github.com/${name}`} target="_blank">
+                    <BlueButton text="Ver Perfil"/>          
+                    </a>
+                            
+                  
+                    
+
                 </div>
                     
                 
