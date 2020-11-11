@@ -3,6 +3,7 @@ import { UserGit } from 'core/types/users';
 import { formatarData } from 'core/utils/formatarData';
 import { makeRequest } from 'core/utils/request';
 import React, { useState } from 'react';
+import ButtonLoaders from './components/Loaders/ButtonLoaders';
 import ProductDescriptionLoader from './components/Loaders/ProductDescriptionLoaders';
 import ProductInfoLoader from './components/Loaders/ProductInfLoaders';
 import './styles.scss';
@@ -12,6 +13,7 @@ const Search = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [isSearch, setIsSearch] = useState(false);
     const [userResponse, setUserResponse] = useState<UserGit>()
+    
 
     const [name, setName] = useState('');
 
@@ -61,7 +63,7 @@ const Search = () => {
                             <div className="more-info">
                                 <h3>Informações</h3>
                                 <p><strong>Empresa: </strong>{`${userResponse?.company}`}</p>
-                            <p><strong>Website/Blog: </strong> {`${userResponse?.blog}`}</p>
+                            <p><strong>Website/Blog: </strong> {`${userResponse?.blog == '' ? 'Sem site' : userResponse?.blog}`}</p>
                             <p><strong>Localidade: </strong> {`${userResponse?.location}`}</p>
                             <p><strong>Membro desde: </strong> {formatarData(`${userResponse?.created_at}`)}</p>
 
@@ -72,7 +74,7 @@ const Search = () => {
                         </div>
                         
                     </div>
-                    {isLoading ? "" : (<>
+                    {isLoading ?  <ButtonLoaders/>: (<>
                         <a href={`https://github.com/${name}`} target="_blank">
                             <BlueButton text="Ver Perfil"/>          
                         </a>
