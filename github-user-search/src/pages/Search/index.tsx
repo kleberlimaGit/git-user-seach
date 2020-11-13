@@ -1,6 +1,6 @@
 import BlueButton from 'core/components/Button';
-import { UserGit } from 'core/types/users';
-import { formatarData } from 'core/utils/formatarData';
+import { UserGit } from 'core/types/user';
+import { formatarData } from 'core/utils/formateDate';
 import { makeRequest } from 'core/utils/request';
 import React, { useState } from 'react';
 import ButtonLoaders from './components/Loaders/ButtonLoaders';
@@ -63,7 +63,7 @@ const Search = () => {
                             <div className="more-info">
                                 <h3>Informações</h3>
                                 <p><strong>Empresa: </strong>{`${userResponse?.company}`}</p>
-                            <p><strong>Website/Blog: </strong> {`${userResponse?.blog == '' ? 'Sem site' : userResponse?.blog}`}</p>
+                            <p><strong>Website/Blog: </strong> {`${userResponse?.blog === '' ? 'Sem site' : userResponse?.blog}`}</p>
                             <p><strong>Localidade: </strong> {`${userResponse?.location}`}</p>
                             <p><strong>Membro desde: </strong> {formatarData(`${userResponse?.created_at}`)}</p>
 

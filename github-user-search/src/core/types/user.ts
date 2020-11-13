@@ -1,4 +1,3 @@
-
 export type UserGit = {
     login:string,
     avatar_url:string,
@@ -13,5 +12,3 @@ export type UserGit = {
 
 
 }
-
-
